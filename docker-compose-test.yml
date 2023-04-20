@@ -7,9 +7,7 @@ services:
       - 1234:5432
     env_file:
       - back-end/.env.test
-    volumes:
-      - postgres-volume:/var/lib/postgresql/data
-
+ 
   node:
     container_name: node
     build: ./back-end
