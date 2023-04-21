@@ -17,4 +17,3 @@ services:
       - postgres
     env_file:
       - ./back-end/.env.test
- 
