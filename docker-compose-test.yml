@@ -1,5 +1,5 @@
 services:
-  postgres_sorteador_db_live:
+  postgres:
     image: postgres
     container_name: postgres
     restart: always
@@ -8,9 +8,10 @@ services:
     env_file:
       - ./back-end/.env.test
 
-  node_sorteador_app_live:
+  node:
     container_name: node
     build: ./back-end
+    restart: always
     ports:
       - 5000:5000
     depends_on:
